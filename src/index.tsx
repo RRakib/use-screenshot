@@ -13,7 +13,7 @@ export const useScreenshot = (options?: UseScreenshotProps) => {
       let tempImage: string | undefined;
 
       try {
-        const body = document.getElementById("root")!;
+        const body = document.querySelector("body")!;
 
         if (type === "jpg") {
           tempImage = await toJpeg(ref?.current || body, options);
